@@ -135,10 +135,7 @@ RUN set -xe && \
 # Install ruTorrent
 RUN set -xe && \
     mkdir -p /var/www/html && \
-    wget https://github.com/Novik/ruTorrent/archive/v${VER_RUTORRENT}.tar.gz -O /tmp/rutorrent-${VER_RUTORRENT}.tar.gz && \
-    tar xvzf /tmp/rutorrent-${VER_RUTORRENT}.tar.gz -C /tmp && \
-    rm -f /tmp/rutorrent-${VER_RUTORRENT}.tar.gz && \
-    mv /tmp/ruTorrent-${VER_RUTORRENT} /var/www/html/rutorrent && \
+    git clone --recurse-submodules https://github.com/Novik/ruTorrent.git /rutorrent/app && \
     git clone https://github.com/mcrapet/plowshare /tmp/plowshare && \
     git clone https://github.com/xombiemp/ruTorrentMobile /var/www/html/rutorrent/plugins/mobile && \
     git clone https://github.com/Phlooo/ruTorrent-MaterialDesign /var/www/html/rutorrent/plugins/theme/themes/materialdesign && \
