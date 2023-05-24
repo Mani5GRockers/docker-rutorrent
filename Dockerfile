@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.18
 
 LABEL description="rTorrent & ruTorrent & Filebot (based on Alpine)" \
       maintainer="Djerfy <djerfy@gmail.com>" \
